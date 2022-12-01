@@ -1,5 +1,7 @@
-use aoc2022::solve_all;
+mod day01;
 
-fn main() {
-    solve_all();
+fn main()  -> Result<(), Box<dyn std::error::Error>> {
+    println!("Day01: {:#?}", day01::solve("input/day01.txt")?);
+
+    Ok(())
 }
