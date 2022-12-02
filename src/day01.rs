@@ -72,7 +72,7 @@ by these three elves is 45000.
 
 Find the top three Elves carrying the most Calories. How many Calories are those Elves carrying in
 total?
-**/
+*/
 pub fn solve(path: &str) -> Result<(String, String), Box<dyn std::error::Error>> {
     let file = std::fs::read_to_string(path)?;
     let lines = file.lines();
