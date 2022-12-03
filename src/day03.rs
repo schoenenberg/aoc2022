@@ -1,6 +1,5 @@
 use std::collections::HashSet;
 
-
 /**
 ## --- Day 3: Rucksack Reorganization ---
 
