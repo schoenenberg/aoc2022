@@ -1,3 +1,5 @@
+#![allow(clippy::identity_op)]
+
 /**
 ## --- Day 2: Rock Paper Scissors ---
 
@@ -76,7 +78,7 @@ pub fn solve(path: &str) -> Result<(String, String), Box<dyn std::error::Error>>
     let mut score: i64 = 0;
     let mut score_2: i64 = 0;
     for i in lines {
-        let (opponent, me) = i.split_once(" ").expect("Couldn't split ...");
+        let (opponent, me) = i.split_once(' ').expect("Couldn't split ...");
         match (opponent, me) {
             ("A", "X") => {
                 // own response + result

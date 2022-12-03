@@ -72,7 +72,7 @@ by these three elves is 45000.
 
 Find the top three Elves carrying the most Calories. How many Calories are those Elves carrying in
 total?
-*/
+ */
 pub fn solve(path: &str) -> Result<(String, String), Box<dyn std::error::Error>> {
     let file = std::fs::read_to_string(path)?;
     let lines = file.lines();
@@ -96,7 +96,7 @@ pub fn solve(path: &str) -> Result<(String, String), Box<dyn std::error::Error>>
     let max_value = sums
         .iter()
         .max()
-        .ok_or("couldn't find max value".to_string())?;
+        .ok_or_else(|| "couldn't find max value".to_string())?;
     let top_three: i64 = sums.iter().rev().take(3).sum();
 
     Ok((max_value.to_string(), top_three.to_string()))
