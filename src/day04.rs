@@ -83,10 +83,10 @@ pub fn solve(path: &str) -> Result<(String, String), Box<dyn std::error::Error>>
     let mut contains_counter = 0;
     let mut overlap_counter = 0;
     for l in lines {
-        let (a, b) = l.split_once(',').ok_or_else(|| "no comma found")?;
-        let (a_low, a_high) = a.split_once('-').ok_or_else(|| "no minus found in part 1")?;
-        let (b_low, b_high) = b.split_once('-').ok_or_else(|| "no minus found in part 2")?;
-        
+        let (a, b) = l.split_once(',').ok_or("no comma found")?;
+        let (a_low, a_high) = a.split_once('-').ok_or("no minus found in part 1")?;
+        let (b_low, b_high) = b.split_once('-').ok_or("no minus found in part 2")?;
+
         let a = Range {
             low: a_low.parse()?,
             high: a_high.parse()?,

@@ -1,8 +1,8 @@
-mod macros;
 mod day01;
 mod day02;
 mod day03;
 mod day04;
+mod macros;
 
 fn main() -> Result<(), Box<dyn std::error::Error>> {
     print_day!(1, day01);
